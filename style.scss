@@ -5,16 +5,223 @@ $gray: #CBCFD4;
 $light-gray: #F4F4F4;
 $dark-gray: #8D8D8D;
 $important: #D84033;
-
-.page-light{
-    background-color: $light;
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.page{
+    &-light{
+        background-color: $light;
+    }
+    &-dark{
+        background-color: $dark;
+    }
 }
 .wrapper{
     max-width: 1110px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 126px;
+    padding-top: 46px;
+}
+.nav{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    &-item{
+        margin-right: 52px;
+    }
+    &-link{
+        color:$dark;
+        text-decoration: none;
+    }
+}
+.cart{
+    background-image: url(../img/cart.svg);
+    padding-left: 45px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.sl{
+    position: absolute;
+    width: 45.75px;
+    height: 17px;
+    top: 64px;
+    
+}
+.title-h2{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 36px;
+}
+.btn{
+    background-color: $accent;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 28px;
+    &-xs{
+    padding: 8px 28px;
+    }
+    &-center{
+        display: block;
+        text-align: center;
+        max-width: 200px;
+        margin: 0 auto;
+    span{
+        margin-right: 15px;
+    }
+    }
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    &-item{
+        flex: 0 0 50%;
+    }
+}
+.sale{
+    &-description{
+        font-size: 30px;
+        letter-spacing: -0.6px;
+    }
+    &-title{
+        font-size: 55px;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+}
+.box{
+    position: relative;
+    &-price{
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 35px;
+            &-old{
+            font-size: 24px;
+            font-weight: 700;
+            }
+            &-new{
+            font-size: 42px;
+            font-weight: 700;
+            color: $important;
+            margin-top: 17px;
+            }
+    }
+}
+.notice{
+    color: #fff;
+    padding: 64px 0;
+    text-align: center;
+    &-title{
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 400;
+        span{
+            font-weight: 700;
+        }
+    }
+    &-description{
+        font-size: 21px;
+    }
+}
+.collection{
+    display: flex;
+    justify-content: space-between;
+    &-item{
+        padding: 43px;
+        flex: 0 0 50%;
+        background-repeat: no-repeat;
+        background-size: 190px 171px;
+        background-position: right bottom;
+    }
+    &-man{
+        background-image: url(/img/man.png);
+    }
+    &-woman{
+        background-image: url(/img/woman.png);
+    }
+    &-title{
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    &-description{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
+.product{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &-item{
+        flex: 0 0 24%;
+        position: relative;
+        &:before, &:after{
+            content:"";
+            display: block;
+            width: 100%;
+            height: 25px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &::before{
+            background-image: url('../img/item-top.svg');
+        }
+        &::after{
+            background-image: url('../img/item-bottom.svg');
+        }
+    }
+    &-title{
+        font-weight: 600;
+    }
+    &-price{
+        font-size: 18px;
+        font-weight: 700;
+        color: $accent;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    &-logo{
+        flex: 0 0 40%;
+    }
+    &-nav{
+        flex: 0 0 60%;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+    &-list{
+        list-style-type: none;
+        padding-left: 0;
+        &-item{
+            margin-bottom: 10px;
+        }
+        &-title{
+            font-size: 10px;
+            font-weight: 700;
+        }
+        &-link{
+            color: $gray;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    }
 }
